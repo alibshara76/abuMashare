@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدماتنا | الصفحة الرئيسية</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f5f6fa;
+            --dark-bg: #1a1a1a;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 0.5rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color) !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        .nav-contact {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-right: 1rem;
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            background-color: var(--secondary-color);
+            transition: all 0.3s;
+        }
+
+        .nav-phone:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-phone i {
+            font-size: 1rem;
+        }
+
+        .nav-link {
+            color: var(--text-color) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin: 0 0.3rem;
+            padding: 0.5rem 0.8rem !important;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: var(--light-bg);
+            color: var(--secondary-color) !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: none;
+            position: relative;
+            width: 24px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: all 0.3s;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -8px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: -8px;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: white;
+                padding: 1rem;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                margin-top: 0.5rem;
+            }
+
+            .nav-link {
+                padding: 0.5rem 0 !important;
+                margin: 0.3rem 0;
+            }
+
+            .nav-contact {
+                margin: 0.5rem 0 0 0;
+                justify-content: flex-start;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+
+        .call-button {
+            background-color: var(--secondary-color);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            opacity: 0.9;
+        }
+
+        .cta-button i {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                padding: 0 1rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .hero-buttons {
+                padding: 0 1rem;
+            }
+
+            .cta-button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 5rem 0 2rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 1.5rem auto 0;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 1rem auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .testimonial-quote {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .testimonial-content {
+            margin-top: 1.5rem;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .testimonial-author img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-left: 1rem;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .pricing-price {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .pricing-features li i {
+            color: var(--secondary-color);
+            margin-left: 1rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 1.2rem;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .team-member p {
+            color: #666;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-left: 1rem;
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .real-estate {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .real-estate-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .real-estate-description {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .real-estate-description p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .real-estate-services {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .real-estate-services h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .real-estate-services ul {
+            list-style: none;
+        }
+
+        .real-estate-services li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .real-estate-services li i {
+            color: var(--secondary-color);
+            margin-left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .real-estate-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tourism {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .tourism-content {
+            margin-top: 2rem;
+        }
+
+        .tourism-description {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .tourism-description p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tourism-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tourism-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .tourism-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .tourism-card .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .tourism-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .tourism-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .tourism-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .investment {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .investment-content {
+            margin-top: 2rem;
+        }
+
+        .investment-description {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .investment-description p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .investment-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .investment-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .investment-card .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .investment-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .investment-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .investment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .marriage {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .marriage-content {
+            margin-top: 2rem;
+        }
+
+        .marriage-description {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .marriage-description p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .marriage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .marriage-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .marriage-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .marriage-card .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .marriage-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .marriage-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .marriage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .utilities {
+            padding: 6rem 0;
+            background-color: white;
+        }
+
+        .utilities-content {
+            margin-top: 2rem;
+        }
+
+        .utilities-description {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .utilities-description p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .utilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .utilities-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .utilities-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .utilities-card .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .utilities-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .utilities-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .utilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .municipal {
+            padding: 6rem 0;
+            background-color: var(--light-bg);
+        }
+
+        .municipal-content {
+            margin-top: 2rem;
+        }
+
+        .municipal-description {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .municipal-description p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .municipal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .municipal-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .municipal-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .municipal-card .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .municipal-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .municipal-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .municipal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-contact {
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .working-hours {
+            margin-top: 1.5rem;
+        }
+
+        .day {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            margin-left: 0.5rem;
+        }
+
+        .social-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-building"></i>
+                مكتب ابو مشاري للخدمات العامة
+            </a>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>حلول متكاملة لجميع احتياجاتك</h1>
+            <p>نقدم خدمات احترافية في مختلف المجالات مع فريق متخصص وخدمة عملاء على مدار الساعة</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/966123456789" class="cta-button whatsapp-button" target="_blank">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                </a>
+                <a href="tel:+966123456789" class="cta-button call-button">
+                    <i class="fas fa-phone"></i> اتصل بنا الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">عميل راضي</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">مشروع مكتمل</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">خبير متخصص</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">دعم فني</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">خدمات وزارة الصناعة</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-file-alt service-icon"></i>
+                    <h3>إصدار ترخيص صناعي</h3>
+                    <p>خدمة إصدار التراخيص الصناعية للمصانع والمنشآت الصناعية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-industry service-icon"></i>
+                    <h3>رخصة تشغيل مصنع</h3>
+                    <p>إصدار وتجديد رخص تشغيل المصانع والمنشآت الصناعية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-bar service-icon"></i>
+                    <h3>المسح الصناعي</h3>
+                    <p>خدمات المسح والدراسات الصناعية للمنشآت</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-map-marked-alt service-icon"></i>
+                    <h3>عقد تخصيص أرض</h3>
+                    <p>إصدار عقود تخصيص الأراضي الصناعية من الجهات المشرفة</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-building service-icon"></i>
+                    <h3>سجل تجاري</h3>
+                    <p>خدمات إصدار وتجديد السجلات التجارية للمنشآت الصناعية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-leaf service-icon"></i>
+                    <h3>تصريح بيئي</h3>
+                    <p>إصدار وتجديد التصاريح البيئية للمنشآت الصناعية</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-city service-icon"></i>
+                    <h3>رخصة بلدية تجارية</h3>
+                    <p>إصدار وتجديد الرخص البلدية التجارية للمنشآت الصناعية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="real-estate" id="real-estate">
+        <div class="container">
+            <h2 class="section-title">صكوك الملكية العقاري</h2>
+            <div class="real-estate-content">
+                <div class="real-estate-description">
+                    <p>تحديث الصك اليدوي، أو الصك المفقود، وإصدار صك الإلكتروني، أو التقديم على طلب تعديل صك الإلكتروني دون الرجوع بوضوح ...</p>
+                </div>
+                <div class="real-estate-services">
+                    <h3>خدمات الصكوك العقارية</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> الإشارة إلى الصكوك العقارية</li>
+                        <li><i class="fas fa-check-circle"></i> عقارات المورث</li>
+                        <li><i class="fas fa-check-circle"></i> خدمات دمج و فرز العقود</li>
+                        <li><i class="fas fa-check-circle"></i> فرز فرزات</li>
+                        <li><i class="fas fa-check-circle"></i> تجزئة الاراضي</li>
+                        <li><i class="fas fa-check-circle"></i> دمج الاراضي</li>
+                        <li><i class="fas fa-check-circle"></i> ملف رفع البيانات الجغرافية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tourism" id="tourism">
+        <div class="container">
+            <h2 class="section-title">وزارة السياحة</h2>
+            <div class="tourism-content">
+                <div class="tourism-description">
+                    <p>نقدم خدمات متكاملة في مجال التراخيص والتصاريح السياحية، مع تسهيل إجراءات التجديد والتعديل وتسوية المخالفات</p>
+                </div>
+                <div class="tourism-services">
+                    <div class="tourism-grid">
+                        <div class="tourism-card">
+                            <i class="fas fa-passport service-icon"></i>
+                            <h3>تراخيص هيئة السياحة</h3>
+                            <p>إصدار وتجديد التراخيص السياحية المختلفة</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-hotel service-icon"></i>
+                            <h3>ترخيص مرفق سياحي</h3>
+                            <p>تراخيص المنشآت والمرافق السياحية</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-bed service-icon"></i>
+                            <h3>ترخيص الإيواء السياحي</h3>
+                            <p>تراخيص أماكن الإقامة السياحية</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-umbrella-beach service-icon"></i>
+                            <h3>ترخيص نشاط سياحي</h3>
+                            <p>تراخيص الأنشطة والخدمات السياحية</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-file-alt service-icon"></i>
+                            <h3>تصريح سياحي</h3>
+                            <p>إصدار التصاريح السياحية المتنوعة</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-sync service-icon"></i>
+                            <h3>تجديد رخصة السياحية</h3>
+                            <p>خدمات تجديد التراخيص السياحية</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-file-signature service-icon"></i>
+                            <h3>إصدار رخصة السياحية</h3>
+                            <p>إصدار التراخيص السياحية الجديدة</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-edit service-icon"></i>
+                            <h3>تعديل الرخصة السياحية</h3>
+                            <p>تعديل وتحديث التراخيص السياحية</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-gavel service-icon"></i>
+                            <h3>تسوية مخالفات هيئة السياحة</h3>
+                            <p>معالجة وتسوية المخالفات السياحية</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-file-invoice-dollar service-icon"></i>
+                            <h3>تسوية غرامات شروط الترخيص السياحي</h3>
+                            <p>تسوية الغرامات المتعلقة بشروط التراخيص</p>
+                        </div>
+                        <div class="tourism-card">
+                            <i class="fas fa-hand-holding-usd service-icon"></i>
+                            <h3>تسوية غرامات مزاولة النشاط السياحي</h3>
+                            <p>تسوية الغرامات المتعلقة بالأنشطة السياحية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="investment" id="investment">
+        <div class="container">
+            <h2 class="section-title">خدمات وزارة الاستثمار</h2>
+            <div class="investment-content">
+                <div class="investment-description">
+                    <p>نقدم خدمات متكاملة في مجال الاستثمار والتراخيص الاستثمارية، مع تسهيل إجراءات إصدار وتجديد التراخيص المختلفة</p>
+                </div>
+                <div class="investment-services">
+                    <div class="investment-grid">
+                        <div class="investment-card">
+                            <i class="fas fa-file-contract service-icon"></i>
+                            <h3>رخصة استثمار</h3>
+                            <p>إصدار وتجديد التراخيص الاستثمارية للمشاريع</p>
+                        </div>
+                        <div class="investment-card">
+                            <i class="fas fa-globe service-icon"></i>
+                            <h3>إصدار ترخيص للإستثمار الأجنبي</h3>
+                            <p>تراخيص الاستثمار للمستثمرين الأجانب</p>
+                        </div>
+                        <div class="investment-card">
+                            <i class="fas fa-user-tie service-icon"></i>
+                            <h3>إقامة مستثمر</h3>
+                            <p>خدمات إصدار وتجديد إقامات المستثمرين</p>
+                        </div>
+                        <div class="investment-card">
+                            <i class="fas fa-handshake service-icon"></i>
+                            <h3>ترخيص استثماري</h3>
+                            <p>تراخيص المشاريع والأنشطة الاستثمارية</p>
+                        </div>
+                        <div class="investment-card">
+                            <i class="fas fa-cogs service-icon"></i>
+                            <h3>الترخيص الخدمي</h3>
+                            <p>تراخيص الخدمات والأنشطة الاستثمارية</p>
+                        </div>
+                        <div class="investment-card">
+                            <i class="fas fa-lightbulb service-icon"></i>
+                            <h3>ترخيص ريادي</h3>
+                            <p>تراخيص المشاريع الريادية والابتكارية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marriage" id="marriage">
+        <div class="container">
+            <h2 class="section-title">تصاريح زواج</h2>
+            <div class="marriage-content">
+                <div class="marriage-description">
+                    <p>نقدم خدمات متكاملة في مجال تصاريح الزواج، مع تسهيل إجراءات إصدار وتجديد التصاريح المختلفة</p>
+                </div>
+                <div class="marriage-services">
+                    <div class="marriage-grid">
+                        <div class="marriage-card">
+                            <i class="fas fa-ring service-icon"></i>
+                            <h3>إصدار تصاريح زواج</h3>
+                            <p>خدمات إصدار وتجديد تصاريح الزواج المختلفة</p>
+                        </div>
+                        <div class="marriage-card">
+                            <i class="fas fa-passport service-icon"></i>
+                            <h3>استخراج تصريح زواج سعودي من أجنبية مقيمة</h3>
+                            <p>تصاريح زواج السعوديين من المقيمات الأجنبيات</p>
+                        </div>
+                        <div class="marriage-card">
+                            <i class="fas fa-user-friends service-icon"></i>
+                            <h3>استخراج تصريح زواج سعودية من أجنبي مقيم</h3>
+                            <p>تصاريح زواج السعوديات من المقيمين الأجانب</p>
+                        </div>
+                        <div class="marriage-card">
+                            <i class="fas fa-globe service-icon"></i>
+                            <h3>استخراج تصريح زواج من الخارج</h3>
+                            <p>تصاريح زواج من خارج المملكة العربية السعودية</p>
+                        </div>
+                        <div class="marriage-card">
+                            <i class="fas fa-file-signature service-icon"></i>
+                            <h3>تصريح زواج من وزارة الداخلية</h3>
+                            <p>تصاريح الزواج الصادرة من وزارة الداخلية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="utilities" id="utilities">
+        <div class="container">
+            <h2 class="section-title">المياه والكهرباء</h2>
+            <div class="utilities-content">
+                <div class="utilities-description">
+                    <p>في قطاع الكهرباء والمياه من إصدار فواتير، إيصال خدمة، نقل ملكية، عجز وخدمات أخرى كثيرة تخص الكهرباء والمياه، الغرامات والإعفاءات</p>
+                </div>
+                <div class="utilities-services">
+                    <div class="utilities-grid">
+                        <div class="utilities-card">
+                            <i class="fas fa-bolt service-icon"></i>
+                            <h3>ترخيص شركات الطاقة</h3>
+                            <p>إصدار وتجديد تراخيص شركات الطاقة والكهرباء</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-tint service-icon"></i>
+                            <h3>ترخيص استهلاك المياه</h3>
+                            <p>تراخيص استهلاك المياه للمنشآت والأفراد</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-water service-icon"></i>
+                            <h3>إيصال خدمة ري دائم</h3>
+                            <p>خدمات إيصال وتجديد خدمات الري الدائم</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-plug service-icon"></i>
+                            <h3>إيصال خدمة كهرباء</h3>
+                            <p>خدمات إيصال وتجديد خدمات الكهرباء</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-exchange-alt service-icon"></i>
+                            <h3>نقل ملكية عداد مياه</h3>
+                            <p>خدمات نقل ملكية عدادات المياه</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-exchange-alt service-icon"></i>
+                            <h3>نقل ملكية عداد كهرباء</h3>
+                            <p>خدمات نقل ملكية عدادات الكهرباء</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-certificate service-icon"></i>
+                            <h3>إصدار شهادات الري الحديث</h3>
+                            <p>إصدار وتجديد شهادات أنظمة الري الحديث</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-file-invoice service-icon"></i>
+                            <h3>إصدار الفواتير</h3>
+                            <p>خدمات إصدار وطباعة فواتير الكهرباء والمياه</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-exclamation-triangle service-icon"></i>
+                            <h3>خدمات العجز</h3>
+                            <p>معالجة حالات العجز في الخدمات</p>
+                        </div>
+                        <div class="utilities-card">
+                            <i class="fas fa-hand-holding-usd service-icon"></i>
+                            <h3>الغرامات والإعفاءات</h3>
+                            <p>خدمات تسوية الغرامات وطلبات الإعفاء</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="municipal" id="municipal">
+        <div class="container">
+            <h2 class="section-title">خدمات بلدي</h2>
+            <div class="municipal-content">
+                <div class="municipal-description">
+                    <p>نقدم خدمات بلدية متكاملة تشمل إصدار التراخيص والتصاريح المختلفة للمنشآت والأنشطة التجارية</p>
+                </div>
+                <div class="municipal-services">
+                    <div class="municipal-grid">
+                        <div class="municipal-card">
+                            <i class="fas fa-file-alt service-icon"></i>
+                            <h3>إصدار ترخيص بلدي</h3>
+                            <p>خدمات إصدار وتجديد التراخيص البلدية</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-building service-icon"></i>
+                            <h3>إصدار رخصة بناء</h3>
+                            <p>إصدار وتجديد رخص البناء للمنشآت</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-demolition service-icon"></i>
+                            <h3>إصدار رخصة هدم</h3>
+                            <p>إصدار رخص هدم المنشآت</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-fence service-icon"></i>
+                            <h3>إصدار رخصة تسوير</h3>
+                            <p>إصدار رخص تسوير الأراضي والممتلكات</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-tools service-icon"></i>
+                            <h3>إصدار رخصة أشغال</h3>
+                            <p>إصدار رخص الأشغال العامة</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-ruler-combined service-icon"></i>
+                            <h3>إصدار رخصة تقرير مساحي</h3>
+                            <p>إصدار التقارير المساحية للمنشآت</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-hammer service-icon"></i>
+                            <h3>إصدار رخصة ترميم</h3>
+                            <p>إصدار رخص ترميم المنشآت</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-truck-loading service-icon"></i>
+                            <h3>إصدار رخصة تجهيز موقع</h3>
+                            <p>إصدار رخص تجهيز المواقع</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-cogs service-icon"></i>
+                            <h3>إصدار رخصة تشغيلي</h3>
+                            <p>إصدار رخص التشغيل للمنشآت</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-home service-icon"></i>
+                            <h3>إصدار رخصة سكن جماعي</h3>
+                            <p>إصدار رخص السكن الجماعي</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-truck service-icon"></i>
+                            <h3>إصدار رخصة عربة متنقلة</h3>
+                            <p>إصدار رخص العربات المتنقلة</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-smoking service-icon"></i>
+                            <h3>تصريح منتجات تبغ</h3>
+                            <p>إصدار تصاريح منتجات التبغ</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-tree service-icon"></i>
+                            <h3>إصدار ترخيص ريفي</h3>
+                            <p>إصدار التراخيص الريفية</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-shield-alt service-icon"></i>
+                            <h3>تراخيص السلامة</h3>
+                            <p>إصدار تراخيص السلامة للمنشآت</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-fire-extinguisher service-icon"></i>
+                            <h3>ترخيص الدفاع المدني</h3>
+                            <p>إصدار تراخيص الدفاع المدني</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-store service-icon"></i>
+                            <h3>رخصة تجارية</h3>
+                            <p>إصدار وتجديد الرخص التجارية</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-shopping-bag service-icon"></i>
+                            <h3>ترخيص محل تجاري</h3>
+                            <p>إصدار تراخيص المحلات التجارية</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-briefcase service-icon"></i>
+                            <h3>إصدار نشاط تجاري</h3>
+                            <p>إصدار تراخيص الأنشطة التجارية</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-gavel service-icon"></i>
+                            <h3>تسوية مخالفات نشاط تجاري</h3>
+                            <p>معالجة وتسوية مخالفات الأنشطة التجارية</p>
+                        </div>
+                        <div class="municipal-card">
+                            <i class="fas fa-file-invoice-dollar service-icon"></i>
+                            <h3>غرامات ترخيص تجاري</h3>
+                            <p>تسوية غرامات التراخيص التجارية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">آراء عملائنا</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right testimonial-quote"></i>
+                    <p class="testimonial-content">خدمة ممتازة وفريق عمل محترف. أنصح الجميع بالتعامل معهم</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="عميل">
+                        <div class="author-info">
+                            <h4>أحمد محمد</h4>
+                            <p>مدير شركة التقنية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-right testimonial-quote"></i>
+                    <p class="testimonial-content">تجربة رائعة مع فريق العمل. تم تنفيذ المشروع في الوقت المحدد وبجودة عالية</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="عميلة">
+                        <div class="author-info">
+                            <h4>سارة أحمد</h4>
+                            <p>رئيسة قسم التسويق</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">باقات الأسعار</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">الباقة الأساسية</h3>
+                        <div class="pricing-price">500 ريال</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> تصميم موقع إلكتروني</li>
+                        <li><i class="fas fa-check"></i> 5 صفحات</li>
+                        <li><i class="fas fa-check"></i> استضافة مجانية</li>
+                        <li><i class="fas fa-check"></i> دعم فني لمدة شهر</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">اشترك الآن</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">الباقة المتوسطة</h3>
+                        <div class="pricing-price">1000 ريال</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> تصميم موقع إلكتروني</li>
+                        <li><i class="fas fa-check"></i> 10 صفحات</li>
+                        <li><i class="fas fa-check"></i> استضافة مجانية</li>
+                        <li><i class="fas fa-check"></i> دعم فني لمدة 3 أشهر</li>
+                        <li><i class="fas fa-check"></i> تحسين محركات البحث</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">اشترك الآن</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">الباقة المميزة</h3>
+                        <div class="pricing-price">2000 ريال</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> تصميم موقع إلكتروني</li>
+                        <li><i class="fas fa-check"></i> صفحات غير محدودة</li>
+                        <li><i class="fas fa-check"></i> استضافة مجانية</li>
+                        <li><i class="fas fa-check"></i> دعم فني لمدة سنة</li>
+                        <li><i class="fas fa-check"></i> تحسين محركات البحث</li>
+                        <li><i class="fas fa-check"></i> تسويق رقمي</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">اشترك الآن</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">فريقنا</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="عضو الفريق">
+                    <h3>محمد أحمد</h3>
+                    <p>مدير المشروع</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="عضو الفريق">
+                    <h3>نورا سعيد</h3>
+                    <p>مصممة جرافيك</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="عضو الفريق">
+                    <h3>خالد محمد</h3>
+                    <p>مبرمج</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">اتصل بنا</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>معلومات التواصل</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>شارع الملك فهد، الرياض، المملكة العربية السعودية</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+966 12 345 6789</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@example.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>الأحد - الخميس: 9:00 ص - 5:00 م</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>عن المكتب</h3>
+                    <p>مكتب ابو مشاري للخدمات العامة يقدم خدمات متكاملة في مختلف المجالات الحكومية والخاصة، مع فريق متخصص وخدمة عملاء على مدار الساعة.</p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>المملكة العربية السعودية</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+966 12 345 6789</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@abumashari.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">خدمات وزارة الصناعة</a></li>
+                        <li><a href="#real-estate">صكوك الملكية</a></li>
+                        <li><a href="#tourism">وزارة السياحة</a></li>
+                        <li><a href="#investment">وزارة الاستثمار</a></li>
+                        <li><a href="#marriage">تصاريح زواج</a></li>
+                        <li><a href="#utilities">المياه والكهرباء</a></li>
+                        <li><a href="#municipal">خدمات بلدية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>ساعات العمل</h3>
+                    <div class="working-hours">
+                        <div class="day">
+                            <span>الأحد - الخميس</span>
+                            <span>8:00 ص - 5:00 م</span>
+                        </div>
+                        <div class="day">
+                            <span>الجمعة</span>
+                            <span>مغلق</span>
+                        </div>
+                        <div class="day">
+                            <span>السبت</span>
+                            <span>9:00 ص - 2:00 م</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>تابعنا</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-snapchat"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2024 مكتب ابو مشاري للخدمات العامة</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
